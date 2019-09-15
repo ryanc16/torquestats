@@ -5,10 +5,13 @@ import { StatsMapPageModule } from './stats-map.page.module';
 
 @NgModule({
   imports: [
+    StatsMapPageModule,
     RouterModule.forRoot([
       {path: 'map', component: StatsMapPageComponent}
-    ]),
-    StatsMapPageModule
+    ])
+  ],
+  exports: [
+    RouterModule
   ]
 })
 export class StatsMapPageRoutingModule {}
