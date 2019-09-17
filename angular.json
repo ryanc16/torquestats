@@ -28,9 +28,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/leaflet/dist/leaflet.css",
+              "node_modules/leaflet-groupedlayercontrol/dist/leaflet.groupedlayercontrol.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {
