@@ -61,3 +61,23 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+
+declare global {
+  interface Array<T> {
+    unique<T>(compareFn: (value: T) => any): Array<T>;
+  }
+}
+
+Array.prototype.unique = function(compareFn) {
+  const result = [];
+  const map = new Map();
+  for (const item of this) {
+    let key = compareFn(item);
+    if(!map.has(key)){
+        map.set(key, true);    // set any value to Map
+        result.push(item);
+    }
+  }
+  return result;
+}

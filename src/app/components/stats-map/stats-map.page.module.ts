@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { StatsMapPageComponent } from './stats-map.page';
+import { RestServicesModule } from 'src/app/services/rest/rest-services.module';
 
 @NgModule({
   declarations: [
@@ -9,7 +10,7 @@ import { StatsMapPageComponent } from './stats-map.page';
     
   ],
   imports: [
-    
+    RestServicesModule
   ],
   exports: [
     StatsMapPageComponent
